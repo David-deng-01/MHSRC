@@ -1,0 +1,12 @@
+seed: 42
+
+feature_file_dir: output/extract_feature
+json_file_dir: output/subtitle
+output_dir: output/split_data
+
+train_ratio: 0.8
+valid_ratio: 0.1
+test_ratio: 0.1
+
+
+skip_season_eps: []

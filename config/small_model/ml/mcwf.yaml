@@ -1,0 +1,7 @@
+train_config:
+  experiment: 'mcwf'
+
+model_config:
+  aligned_dim: 512
+  task_num: 2
+  num_labels: 2

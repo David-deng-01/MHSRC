@@ -1,0 +1,13 @@
+tasks:
+  - humor
+  - sarcasm
+
+# 包含预先抽好的文本、音频、视觉特征
+# Contains pre-selected text, audio, and visual features
+feature_file_dir: output/split_data
+# json文件
+# json files
+subtitle_file_dir: output/split_data
+cache_dir: cache
+
+

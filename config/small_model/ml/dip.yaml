@@ -1,0 +1,15 @@
+common_config:
+  tokenizer_pretrained_path: '/backup/workspace/xjnu7/pretrained_models/qwen/7b-chat'
+
+train_config:
+  experiment: 'dip'
+
+model_config:
+  aligned_dim: 512
+  memory_length: 256
+  multimodal_fusion: "product"
+  multilevel_fusion: "concat"
+  lambda_sentiment: 1.0
+  lambda_semantic: 1.0
+  constant: 0.0
+  task_num: 2

@@ -1,0 +1,52 @@
+# main.yaml 默认配置
+# main.yaml default config
+# 模型名.yaml: 自定义配置, 可覆盖默认配置
+# {model_name}.yaml: custom config, overwrite the default config
+
+model_name: mcwf
+
+common_config:
+  task: humor
+  data_dir: 'cache/${common_config.task}'
+  used_modals:
+    - audio
+    - visual
+    - text
+
+train_config:
+  seed: 42
+  output_dir: "output/small_model/ml"
+  device: "cuda:1"
+  epochs: 10
+
+  train_batch_size: 16
+  eval_batch_size: 48
+  test_batch_size: 48
+  max_grad_norm: 1.0
+  do_eval: true
+  eval_interval: epoch
+  train_log_items: [ loss , sarcasm_loss, humor_loss ]
+  eval_log_items: [
+    loss, sarcasm_loss, humor_loss,
+    humor_f1, humor_recall, humor_auc, humor_precision, humor_acc,
+    sarcasm_f1, sarcasm_recall, sarcasm_auc, sarcasm_precision, sarcasm_acc,
+    all_f1, all_recall, all_auc, all_precision, all_acc
+  ]
+  eval_key_label: all_auc
+  test_log_items: [
+    loss, sarcasm_loss, humor_loss,
+    humor_f1, humor_recall, humor_auc, humor_precision, humor_acc,
+    sarcasm_f1, sarcasm_recall, sarcasm_auc, sarcasm_precision, sarcasm_acc,
+    all_f1, all_recall, all_auc, all_precision, all_acc
+  ]
+  low_is_better: false
+  keep_one: true
+  lr: 1e-5
+  do_log: true
+  patience: -1
+  do_test_on_best: true
+  loss_label: loss
+
+model_config:
+  main_task_weight: 1.5
+  main_task_id: 0

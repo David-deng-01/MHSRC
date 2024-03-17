@@ -1,0 +1,25 @@
+train_config:
+  experiment: 'misa'
+  train_log_items: [loss, cls, diff, cmd, recon, humor_loss, sarcasm_loss]
+  eval_log_items: [
+    loss, cls, diff, cmd, recon, humor_loss, sarcasm_loss,
+    humor_f1, humor_recall, humor_auc, humor_precision, humor_acc,
+    sarcasm_f1, sarcasm_recall, sarcasm_auc, sarcasm_precision, sarcasm_acc,
+    all_f1, all_recall, all_auc, all_precision, all_acc
+  ]
+  test_log_items: [
+    loss, cls, diff, cmd, recon, humor_loss, sarcasm_loss,
+    humor_f1, humor_recall, humor_auc, humor_precision, humor_acc,
+    sarcasm_f1, sarcasm_recall, sarcasm_auc, sarcasm_precision, sarcasm_acc,
+    all_f1, all_recall, all_auc, all_precision, all_acc
+  ]
+
+model_config:
+  aligned_dim: 128
+  dropout_rate: 0.5
+  reverse_grad_weight: 1.0
+  num_classes: 2
+  diff_weight: 0.3
+  sim_weight: 1.0
+  recon_weight: 1.0
+  task_num: 2

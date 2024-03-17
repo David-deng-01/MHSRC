@@ -1,0 +1,25 @@
+train_config:
+  experiment: 'cubemlp'
+  train_log_items: [ loss ]
+  eval_log_items: [ loss, acc, f1, recall, auc, precision ]
+  test_log_items: [ loss, acc, f1, recall, auc, precision ]
+
+
+model_config:
+  time_len: 100
+  aligned_dim: 128
+  dropouts: [ 0.1, 0.1, 0.1, 0.1 ]
+  activate: gelu
+  d_hiddens:
+    - [ 50, 3, 128 ]
+    - [ 10, 3, 32 ]
+  d_outs:
+    - [ 50, 3, 128 ]
+    - [ 10, 3, 32 ]
+  dropout_mlp: [ 0.1, 0.1, 0.1 ]
+  bias: true
+  ln_first: true
+  res_project: [ true, true ]
+  num_class: 2
+  features_compose_t: mean
+  features_compose_k: cat

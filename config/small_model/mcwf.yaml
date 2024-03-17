@@ -1,0 +1,16 @@
+train_config:
+  experiment: 'mcwf'
+  train_log_items: [ loss ]
+  eval_log_items: [ loss, acc, f1, recall, auc, precision ]
+  test_log_items: [ loss, acc, f1, recall, auc, precision ]
+
+
+model_config:
+  num_class: 2
+  aligned_dim: 512
+  gru_config:
+    num_layers: 2
+    batch_first: true
+    bidirectional: true
+    dropout: 0.1
+    hidden_size: 256

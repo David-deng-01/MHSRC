@@ -1,0 +1,37 @@
+# main.yaml 默认配置
+# main.yaml default config
+# 模型名.yaml: 自定义配置, 可覆盖默认配置
+# {model_name}.yaml: custom config, overwrite the default config
+
+model_name: unimse
+
+common_config:
+  task: humor
+  data_dir: 'cache/classifier/${common_config.task}'
+  used_modals:
+    - audio
+    - visual
+    - text
+
+train_config:
+  seed: 42
+  output_dir: "output/small_model/type_classifier"
+  device: "cuda:2"
+  epochs: 10
+
+  train_batch_size: 16
+  eval_batch_size: 48
+  test_batch_size: 48
+  max_grad_norm: 1.0
+  do_eval: true
+  # 只要不是数字, 那就是每个epoch结束验证
+  # As long as it is not a number, it is verified at the end of each epoch
+  eval_interval: epoch
+  eval_key_label: f1
+  low_is_better: false
+  keep_one: true
+  lr: 1e-5
+  do_log: true
+  patience: -1
+  do_test_on_best: true
+  loss_label: loss

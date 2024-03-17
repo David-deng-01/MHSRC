@@ -1,0 +1,14 @@
+train_config:
+  experiment: 'misa'
+  train_log_items: [loss, cls, diff, cmd, recon]
+  eval_log_items: [loss, cls, diff, cmd, recon, acc, f1, recall, auc, precision]
+  test_log_items: [loss, cls, diff, cmd, recon, acc, f1, recall, auc, precision]
+
+model_config:
+  aligned_dim: 128
+  dropout_rate: 0.5
+  reverse_grad_weight: 1.0
+  num_classes: 2
+  diff_weight: 0.3
+  sim_weight: 1.0
+  recon_weight: 1.0
