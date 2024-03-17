@@ -23,7 +23,9 @@ Multimodal Humor and Sarcasm Recognition in Chinese: Dataset Construction, Assoc
 
 你可以下载我们已经处理好的缓存文件[[BaiduNetDisk]()]，或者通过以下方式自行生成
 
-*确保你已经完成了第一步。*考虑到数据是标签不平衡的，因此我们对训练集过采样、验证集测试集欠采样生成缓存文件。
+*确保你已经完成了第一步。*
+
+考虑到数据是标签不平衡的，因此我们对训练集过采样、验证集测试集欠采样生成缓存文件。
 
 配置文件：`config/generate_cache/main.yaml`
 

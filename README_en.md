@@ -24,7 +24,9 @@ Run: `python 1_split_data.py`
 
 You can download the cached file we have already processed [[BaiduNetDisk]()], or you can generate your own in the following way
 
-*Make sure you've completed step 1.* Considering that the data is label unbalanced, we oversample the training set and undersample the verification set and test set to generate a cache file.
+*Make sure you've completed step 1.* 
+
+Considering that the data is label unbalanced, we oversample the training set and undersample the verification set and test set to generate a cache file.
 
 Configuration file: `config/generate_cache/main.yaml`
 
