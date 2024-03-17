@@ -2,7 +2,7 @@
 
 Multimodal Humor and Sarcasm Recognition in Chinese: Dataset Construction, Association Analysis and Fine-grained Analysis
 
-**0. 数据下载**
+**0. Download the dataset**
 
 Three-mode feature file and json file download address: [[BaiduNetDisk]()]
 
